@@ -5,8 +5,8 @@ var expressapp = express()
 expressapp.get('/', function (req, res) {
     res.send('{"message":"Hello World Javascript Nuvepro v1 from Azure pipeline now"}')
 })
-expressapp.listen(5000, function () {
-    console.log('Ready on port 5000!')
+expressapp.listen(5001, function () {
+    console.log('Ready on port 5001!')
 })
 
 /* To Handle Ctrl C*/

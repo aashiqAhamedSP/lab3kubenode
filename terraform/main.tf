@@ -14,7 +14,7 @@ terraform {
 
 resource "azurerm_resource_group" "lab3kuberg" {
   name     = "lab3kuberg"
-  location = "southindia"
+  location = "eastus"
 }
 
 data "azurerm_container_registry" "acr" {

@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "lab3_aks" {
   default_node_pool {
     name       = "lab3aksnode"
     node_count = 4
-    vm_size    = "Standard_B2ms"
+    vm_size    = "Standard_DS1_v2"
     enable_auto_scaling = false
   }
 

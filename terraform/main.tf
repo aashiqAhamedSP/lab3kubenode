@@ -27,7 +27,7 @@ resource "azurerm_kubernetes_cluster" "lab3_aks" {
   name                = "lab3_aks"
   location            = azurerm_resource_group.lab3kuberg.location
   resource_group_name = azurerm_resource_group.lab3kuberg.name
-  dns_prefix          = "lab3_aks"
+  dns_prefix          = "labaks"
 
   default_node_pool {
     name       = "lab3aksnode"

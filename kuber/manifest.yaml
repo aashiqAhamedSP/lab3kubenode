@@ -4,23 +4,23 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: wolkapps
-  name: wolkapps
+    app: nodejsapp
+  name: nodejsapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: wolkapps
+      app: nodejsapp
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: wolkapps
+        app: nodejsapp
     spec:
       containers:
-      - image: __ACR__/azwolkrepo:latest
-        name: wolkapp1
+      - image: kubenodejsacr.azurecr.io/lab3kubenode:latest
+        name: nodejsapp1
         imagePullPolicy: Always
         resources: {}
 status: {}
@@ -31,15 +31,15 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: wolkapps
-  name: wolkapps
+    app: nodejsapp
+  name: nodejsapp
 spec:
   ports:
-  - port: 80
+  - port: 5000
     protocol: TCP
-    targetPort: 80
+    targetPort: 5000
   selector:
-    app: wolkapps
+    app: nodejsapp
   type: LoadBalancer
 status:
   loadBalancer: {}

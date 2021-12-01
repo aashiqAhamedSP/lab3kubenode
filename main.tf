@@ -4,7 +4,7 @@ provider "azurerm" {
   client_id       = var.clid
   client_secret   = var.clcr
   tenant_id       = var.tnid
-}
+
 }
 
 terraform {

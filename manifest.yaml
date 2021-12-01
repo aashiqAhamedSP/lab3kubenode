@@ -1,0 +1,47 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodejsapp
+  name: nodejsapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodejsapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nodejsapp
+    spec:
+      containers:
+      - image: aashiqdevops/lab3prac:latest
+        name: nodejsapp1
+        ports:
+        - containerPort: 5001
+        imagePullPolicy: Always
+        resources: {}
+status: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nodejsapp
+  name: nodejsapp
+spec:
+  ports:
+  - port: 5001
+    protocol: TCP
+    targetPort: 5001
+  selector:
+    app: nodejsapp
+  type: LoadBalancer
+status:
+  loadBalancer: {}

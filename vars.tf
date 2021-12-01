@@ -14,7 +14,3 @@ variable "tnid" {
 variable "clcr" {
   type = string
 }
-
-variable "ansssh" {
-  type = string
-}
